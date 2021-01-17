@@ -10,7 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/lezzles11/Problem-Solving-Tool.git"
   },
-  "keywords": [],
+  "keywords": [
+    "JQuery",
+    "getBootstrap",
+    "Example",
+    "Forms",
+    "Debugger",
+    "Problem Solving Tool"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
