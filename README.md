@@ -6,30 +6,18 @@ The purpose of this repository is to create an example repository utilizing JQue
 
 ### How it works :open_book:
 
-![Image](https://www.dropbox.com/s/qssnbo02fau4wwc/Screen%20Shot%202020-07-27%20at%2014.01.49.png?raw=1)
-
-### Where it fits :paperclip:
-
-- [ ] Fits into node.js applications that require user authentication
-
-## Important Vocabulary
-
-| Word | Where it occurs | How it works |
-| ---- | :-------------: | :----------: |
-| Word |                 |              |
-
-### User Stories :telescope:
-
-1. Users will be able to look through the various examples and understand how to test well.
+![Image](https://www.dropbox.com/s/9xmqf767hu0knpa/Screen%20Shot%202021-01-17%20at%2015.33.41.png?raw=1)
+![Image](https://www.dropbox.com/s/ugqyz65rb5d2xsc/Screen%20Shot%202021-01-17%20at%2015.40.25.png?raw=1)
+![Image](https://www.dropbox.com/s/rknm2bnf8vwtzix/Screen%20Shot%202021-01-17%20at%2015.40.32.png?raw=1)
 
 ## Sprint :athletic_shoe:
 
 | Done? | Component              | Priority | Estimated Time | Actual Time |
 | ----- | ---------------------- | :------: | :------------: | :---------: |
-| x     | This checklist         |    H     |    10 mins     |             |
-|       | Read Documentation     |    M     |    30 mins     |             |
-|       | Look at three examples | 30 mins  |                |
-|       | Complete basic example |    M     |    30 mins     |     15      |
+| x     | Read Documentation     |    M     |    30 mins     |   30 mins   |
+| x     | Look at an example     |    H     |    10 mins     |   10 mins   |
+| x     | Complete basic example |    M     |    30 mins     |   1 hour    |
+| x     | Make it look pretttay! |    M     |    30 mins     |   1 hour    |
 
 ### Daily Stand Up :hourglass:
 
