@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://dl.dropbox.com/s/hk7c6wqd8cgm8i4/officialstyles.css"
+    />
+    <link rel="stylesheet" href="" />
+    <style>
+      #box {
+        background: #333;
+        color: #fff;
+        width: 500px;
+        height: 90px;
+        padding: 40px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body class="container font4">
+    <h2>JQuery: Javascript Simplified</h2>
+    <!-- Start JQuery Selecting Element -->
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">
+          JQuery Selecting Element
+        </div>
+        <ol>
+          <li>
+            First, think about what you want to select
+          </li>
+          <li>
+            Think about what you want to do to the code
+          </li>
+        </ol>
+        <div>
+          <p>Change the p tag to red</p>
+          <code>$("p").css("color", "red");</code>
+        </div>
+      </div>
+    </div>
+    <!-- End JQuery Selecting Element -->
+    <br />
+    <!-- JQuery Event -->
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">JQuery Effects</div>
+        <ol>
+          <li>Think about what you want to happen</li>
+          <li>
+            Add the needed elements, and give it an id
+          </li>
+          <li>
+            Add a button (or trigger for the event) - then
+            in the javascript file, add a function
+            <code>
+              $("#btnFadeIn").click(function () {
+              $("#box").fadeIn(1000); });
+            </code>
+          </li>
+        </ol>
+
+        <p>
+          The Jquery documentation is pretty awesome - has
+          multiple examples
+        </p>
+        <div id="box"><p>hi friend</p></div>
+        <button class="btn button" id="btnFadeOut">
+          Fade Out
+        </button>
+        <button class="btn button" id="btnFadeIn">
+          Fade In
+        </button>
+        <button class="btn button" id="btnFadeTog">
+          Fade Toggle
+        </button>
+        <button class="btn button" id="btnSlideUp">
+          Slide Up
+        </button>
+        <button class="btn button" id="btnSlideTog">
+          Slide Toggle
+        </button>
+        <button class="btn button" id="moveLeft">
+          Move Left
+        </button>
+        <button class="btn button" id="moveRight">
+          Move Right
+        </button>
+      </div>
+    </div>
+    <!-- JQuery Event -->
+
+    <br />
+
+    <div class="card">
+      <div class="card-body"></div>
+    </div>
+    <!-- Game -->
+    <!-- JQuery Events -->
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">JQuery Events</div>
+        <!-- Form -->
+        <form id="form">
+          <label>Name</label><br />
+          <input type="text" id="name" name="name" />
+          <br />
+          <label>Email</label><br />
+          <input type="text" id="email" name="email" />
+
+          <br />
+          <br />
+          <input type="submit" value="Submit" />
+        </form>
+        <!-- End of Form -->
+      </div>
+    </div>
+    <!-- JQuery Effect -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script async defer>
+      $(document).ready(function () {
+        $("#btnFadeOut").click(function () {
+          $("#box").fadeOut(1000, function () {
+            $("#btnFadeOut").text("Its Gone");
+          });
+        });
+        $("#btnFadeIn").click(function () {
+          $("#box").fadeIn(1000);
+        });
+        $("#btnFadeTog").click(function () {
+          $("#box").fadeToggle(1000);
+        });
+        $("#btnSlideDown").click(function () {
+          $("#box").slideDown(1000);
+        });
+        $("#btnSlideUp").click(function () {
+          $("#box").slideUp(1000);
+        });
+        $("#btnSlideTog").click(function () {
+          $("#box").slideToggle(1000);
+        });
+        $("#btnStop").click(function () {
+          $("#box").stop();
+        });
+
+        $("#moveRight").click(function () {
+          $("#box").animate({
+            left: 500,
+            height: "300px",
+            width: "300px",
+            opacity: "0.5",
+          });
+        });
+
+        $("#moveLeft").click(function () {
+          $("#box").animate({
+            left: 0,
+            height: "100px",
+            width: "100px",
+            opacity: "1",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
