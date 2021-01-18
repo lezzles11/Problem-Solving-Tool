@@ -17,20 +17,21 @@ $(".problem").on("keydown", function (typingEvent) {
  * ==================================
  ***********************************************/
 
+// Get all the rows of the table
 let numberOfRows = $("#debuggingTable tbody").find("tr")
   .length;
+
 console.log("Current number of rows: ", numberOfRows);
 
+// Upon submission of form
 $(".debuggingForm").submit(function (submitEvent) {
-  //   let numberOfRows = $("#debuggingTable tbody").find("tr")
-  //     .length;
   console.log("Current number of rows: ", numberOfRows);
-  // If event is not handled, don't just submit it
+  // Prevent default event
   submitEvent.preventDefault();
+  // Grab the inputs
   let formObject = submitEvent.target;
   let typeOfForm = formObject.id;
-  console.log("Form Object: ", formObject.problem.value);
-  console.log("Type of form: ", typeOfForm);
+  // Create a row
   let row = $(`
       <tr class="eachRow">
               <td>${formObject.problem.value}</td>
@@ -41,19 +42,21 @@ $(".debuggingForm").submit(function (submitEvent) {
             </tr>`);
 
   if (typeOfForm === "debuggingForm") {
+    // Increase the number of rows by one
     let rowId = numberOfRows++;
-    console.log(rowId);
+    // Add id attribute to the new row
     $(row).attr("id", `row-${rowId}`);
+    // Add the row to the table
     $("tbody").append(row);
+    // Clear the form
     $(this).find(".clear").click();
     alert(`Added problem`);
   } else {
-    console.log(
-      "Value of input changed: ",
-      $(this).prop("row-id")
-    );
+    // Grab the selected row
     $(row).attr("id", $(this).prop("row-id"));
+    // Replace the 
     $("#" + $(this).prop("row-id")).replaceWith(row);
+    // Clear the form
     $(this).find(".clear").click();
     alert(`Updated problem`);
   }
@@ -87,3 +90,5 @@ $("#debuggingTable").on(
     );
   }
 );
+
+
